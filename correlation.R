@@ -1,6 +1,5 @@
 library(tidyverse)
-library(correlation)
-library(corrplot)
+
 x_test <- readRDS("ChallengeData/data_rds_files/x_test")
 
 nwp1 <- x_test %>% filter(met_model == "NWP1")
