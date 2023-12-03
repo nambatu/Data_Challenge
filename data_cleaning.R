@@ -3,9 +3,9 @@ rm(list = ls())
 library(tidyverse)
 library(zoo)
 
-train_target <- read_csv("dc_proj/Y_train_sl9m6Jh.csv")
+train_target <- read_csv("ChallengeData/Y_train_sl9m6Jh.csv")
 
-train_data <- read_csv("dc_proj/X_train_v2.csv") %>%
+train_data <- read_csv("ChallengeData/X_train_v2.csv") %>%
   mutate(
     Time = dmy_hm(Time)
   ) %>%
@@ -35,7 +35,7 @@ train_data <- read_csv("dc_proj/X_train_v2.csv") %>%
     values_from = value
   )
 
-test_data <- read_csv("dc_proj/X_test_v2.csv") %>%
+test_data <- read_csv("ChallengeData/X_test_v2.csv") %>%
   mutate(
     Time = dmy_hm(Time)
   ) %>%
@@ -63,5 +63,5 @@ test_data <- read_csv("dc_proj/X_test_v2.csv") %>%
   )
 
 
-saveRDS(train_data, file = "dc_proj/data_rds_files/x_train")
-saveRDS(test_data, file = "dc_proj/data_rds_files/x_test")
+saveRDS(train_data, file = "ChallengeData/data_rds_files/x_train")
+saveRDS(test_data, file = "ChallengeData/data_rds_files/x_test")
