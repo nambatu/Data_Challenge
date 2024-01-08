@@ -3,10 +3,10 @@ rm(list = ls())
 library(plotly)
 library(tidyverse)
 
-x_test <- readRDS("ChallengeData/data_rds_files/x_test")
+x_test <- readRDS("dc_proj/data_rds_files/x_test")
 
 turbines <- read_delim(
-  "ChallengeData/Complementary_data/WindFarms_complementary_data.csv",
+  "dc_proj/WindFarms_complementary_data.csv",
   delim = ";",
   skip = 1,
   col_names = c(
