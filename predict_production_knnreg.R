@@ -122,7 +122,7 @@ knn_final <- data %>%
     k = 12
   )
 
-public_test <- readRDS("dc_proj/data_rds_files/x_test") %>%
+public_test <- readRDS("ChallengeData/data_rds_files/x_test") %>%
   select(ID:T) %>%
   filter(
     met_model == "NWP2",
@@ -170,7 +170,7 @@ knn_model_uvt <- data %>%
     k = 3
   )
 
-test <- readRDS("dc_proj/data_rds_files/x_test") %>%
+test <- readRDS("ChallengeData/data_rds_files/x_test") %>%
   filter(
     model_time == "00h",
     forecast_time == "D-1"
@@ -241,7 +241,7 @@ knn_model_uvt <- data %>%
     k = 12
   )
 
-test <- readRDS("dc_proj/data_rds_files/x_test") %>%
+test <- readRDS("ChallengeData/data_rds_files/x_test") %>%
   filter(
     model_time == "00h",
     forecast_time == "D-1"
